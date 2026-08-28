@@ -2,8 +2,8 @@ import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { Breadcrumb } from './Breadcrumb';
 import { IconRenderer } from './IconRenderer';
-import { ArrowLeft, Sparkles, Star, ShieldCheck, Tag, ArrowRight } from 'lucide-react';
-import { TOOLS } from '../../utils/toolsData';
+import { ArrowLeft, Sparkles, Star } from 'lucide-react';
+import { ToolSeoSection } from '../seo/ToolSeoSection';
 
 // Academic
 import { PercentageCalc } from '../../tools/academic/PercentageCalc';
@@ -166,74 +166,8 @@ export const ToolRenderer: React.FC = () => {
       {/* Active Tool Content */}
       <div className="pt-2">{renderToolComponent()}</div>
 
-      {/* SEO & Knowledge Context Footer for Active Tool */}
-      <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80 space-y-6">
-        <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
-          <div className="flex items-center justify-between flex-wrap gap-2">
-            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-brand-600 dark:text-brand-400" />
-              <span>About {currentTool.name} & Calculation Standards</span>
-            </h3>
-            <div className="flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
-              <ShieldCheck className="w-4 h-4" />
-              <span>100% Client-Side Private</span>
-            </div>
-          </div>
-          <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            {currentTool.description} This utility is designed according to current academic evaluation formulas (CBSE, UGC, NTA, and University regulations) and operates with zero cloud uploads or data tracking.
-          </p>
-          {currentTool.tags && currentTool.tags.length > 0 && (
-            <div className="pt-2 flex items-center gap-1.5 flex-wrap">
-              <Tag className="w-3.5 h-3.5 text-slate-400" />
-              {currentTool.tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] text-slate-600 dark:text-slate-400 font-medium"
-                >
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Related Category Tools */}
-        {(() => {
-          const related = TOOLS.filter(
-            t => t.category === currentTool.category && t.id !== currentTool.id
-          ).slice(0, 3);
-          if (related.length === 0) return null;
-          return (
-            <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                Related {currentTool.category.replace('-', ' ')} Tools
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {related.map(rTool => (
-                  <button
-                    key={rTool.id}
-                    onClick={() => {
-                      setActiveToolId(rTool.id);
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500 text-left transition-all group flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="font-bold text-xs text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 flex items-center justify-between">
-                        <span>{rTool.name}</span>
-                        <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 transition-transform" />
-                      </div>
-                      <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
-                        {rTool.shortDesc}
-                      </p>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          );
-        })()}
-      </div>
+      {/* In-Depth SEO Guide, Formulas, Worked Examples & FAQs for Active Tool */}
+      <ToolSeoSection tool={currentTool} />
     </div>
   );
 };
