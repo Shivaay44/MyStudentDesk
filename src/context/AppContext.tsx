@@ -174,12 +174,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) {
-          ogUrl.setAttribute('content', `https://mystudentdesk.vercel.app/tools/${tool.id}`);
+          ogUrl.setAttribute('content', `https://my-student-desk-tau.vercel.app/tools/${tool.id}`);
         }
 
         let canonical = document.querySelector('link[rel="canonical"]');
         if (canonical) {
-          canonical.setAttribute('href', `https://mystudentdesk.vercel.app/tools/${tool.id}`);
+          canonical.setAttribute('href', `https://my-student-desk-tau.vercel.app/tools/${tool.id}`);
         }
       }
     } else {
@@ -195,12 +195,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
       const ogUrl = document.querySelector('meta[property="og:url"]');
       if (ogUrl) {
-        ogUrl.setAttribute('content', 'https://mystudentdesk.vercel.app/');
+        ogUrl.setAttribute('content', 'https://my-student-desk-tau.vercel.app/');
       }
 
       let canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
-        canonical.setAttribute('href', 'https://mystudentdesk.vercel.app/');
+        canonical.setAttribute('href', 'https://my-student-desk-tau.vercel.app/');
       }
     }
   }, [activeToolId]);
