@@ -3,14 +3,133 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MyStudentDesk - All-in-One Student Utility Portal & Exam Predictor</title>
-    <meta name="description" content="Ultimate student workspace with 25+ academic tools: Percentage & CGPA, Attendance Bunk Calculator, JEE & NEET Rank Predictor, CUET, CBSE Tools, Pomodoro, Scientific & Matrix Math, PDF tools, QR Generator, and more." />
     
+    <!-- Primary Meta Tags -->
+    <title>MyStudentDesk - Free All-in-One Student Utility Portal & Exam Predictor</title>
+    <meta name="title" content="MyStudentDesk - Free All-in-One Student Utility Portal & Exam Predictor" />
+    <meta name="description" content="Free ultimate student workspace with 25+ academic tools: JEE Main Rank Predictor, NEET Score Calculator, CBSE Best 5 & CGPA Converter, 75% Attendance Bunk Meter, Matrix Math, PDF Merger, Pomodoro Timer, and APA/MLA Citation Generator." />
+    <meta name="keywords" content="JEE Main rank predictor, NEET UG marks vs rank, CBSE percentage calculator, CBSE Best 5 rule, 75 percent attendance calculator, college bunk meter, CGPA to percentage converter, Pomodoro study timer with lofi, client side PDF merger, matrix calculator online, quadratic solver, scientific calculator, CUET score calculator, APA citation generator, GPA calculator India, MyStudentDesk" />
+    <meta name="author" content="MyStudentDesk" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="canonical" href="https://mystudentdesk.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mystudentdesk.vercel.app/" />
+    <meta property="og:title" content="MyStudentDesk - All-in-One Student Utility Portal & Exam Predictor" />
+    <meta property="og:description" content="Calculate CBSE percentages, predict JEE & NEET ranks, simulate 75% college attendance bunk limits, merge PDFs, and study with Pomodoro timers — 100% free and client-side private." />
+    <meta property="og:image" content="https://mystudentdesk.vercel.app/logo.png" />
+    <meta property="og:site_name" content="MyStudentDesk" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mystudentdesk.vercel.app/" />
+    <meta property="twitter:title" content="MyStudentDesk - All-in-One Student Utility Portal & Exam Predictor" />
+    <meta property="twitter:description" content="25+ Fast, Private Academic Tools for Indian & Global Students: JEE/NEET Rank Predictors, CBSE Best 5, Attendance Bunk Meter, Matrix Math, and PDF Utilities." />
+    <meta property="twitter:image" content="https://mystudentdesk.vercel.app/logo.png" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data: WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MyStudentDesk",
+      "url": "https://mystudentdesk.vercel.app/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All (Web Browser, Responsive Mobile & Desktop)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Comprehensive academic suite for school and college students featuring 25+ calculators, predictors, timers, and client-side document tools.",
+      "featureList": [
+        "JEE Main Percentile & AIR Rank Predictor",
+        "NEET UG 720 Score & Medical Seat Probability",
+        "CBSE Class 10 & 12 Best 5 Percentage Calculator",
+        "College 75% Attendance & Safe Bunk Meter",
+        "University CGPA to Percentage Conversion Matrix",
+        "Matrix & Scientific Math Solvers",
+        "Client-Side Zero-Upload PDF Merger & Splitter",
+        "Pomodoro Study Timer with Lo-Fi Audio",
+        "APA, MLA, IEEE Academic Citation Generator"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: WebSite & SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "MyStudentDesk",
+      "url": "https://mystudentdesk.vercel.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://mystudentdesk.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the 75% attendance bunk calculator work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator evaluates your total and attended lectures using the formula: Required Classes = ceil((0.75 * Total - Attended) / 0.25) if below 75%, or Safe Bunks = floor((Attended - 0.75 * Total) / 0.75) if above 75%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the CBSE Class 10 and 12 percentage calculated under the Best of 5 rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For CBSE Class 10 & 12, 1 Language subject is mandatory along with your 4 highest-scoring academic or vocational subjects out of the remaining subjects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert CGPA to Percentage for Indian Universities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For CBSE and most central universities, Percentage = CGPA * 9.5. For Mumbai University: Percentage = 7.1 * CGPA + 11 (if CGPA >= 7) or 7.25 * CGPA + 11 (if CGPA < 7). For VTU: (CGPA - 0.75) * 10."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is the JEE Main Rank Predictor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The JEE Main Rank Predictor utilizes historical NTA score distribution curves, past shift difficulty parameters, and candidate registration volume (14+ lakh candidates) to compute estimated percentiles and All India Ranks (AIR)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my files safe when using the PDF tools on MyStudentDesk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 100% safe. All PDF merging, splitting, and processing runs entirely inside your browser's local memory using WebAssembly/JavaScript. No documents or sensitive data are ever uploaded to any external server."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-slate-50 text-slate-900 dark:bg-[#090d16] dark:text-slate-100 min-h-screen font-sans selection:bg-brand-500 selection:text-white transition-colors duration-200">
     <div id="root"></div>

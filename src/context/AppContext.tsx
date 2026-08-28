@@ -114,6 +114,29 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  // Dynamic SEO Title & Meta Description update
+  useEffect(() => {
+    if (activeToolId) {
+      const tool = TOOLS.find(t => t.id === activeToolId);
+      if (tool) {
+        document.title = `${tool.name} - Free Online Calculator & Predictor | MyStudentDesk`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.setAttribute('content', `${tool.name}: ${tool.description} Fast, accurate, client-side private tool.`);
+        }
+      }
+    } else {
+      document.title = 'MyStudentDesk - Free All-in-One Student Utility Portal & Exam Predictor';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'Free ultimate student workspace with 25+ academic tools: JEE Main Rank Predictor, NEET Score Calculator, CBSE Best 5 & CGPA Converter, 75% Attendance Bunk Meter, Matrix Math, PDF Merger, Pomodoro Timer, and APA/MLA Citation Generator.'
+        );
+      }
+    }
+  }, [activeToolId]);
+
   // Keyboard shortcut for Command Palette (Ctrl+K or Cmd+K)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

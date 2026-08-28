@@ -2,6 +2,7 @@ import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { CATEGORIES, TOOLS } from '../../utils/toolsData';
 import { ToolCard } from '../common/ToolCard';
+import { SeoKnowledgeHub } from '../seo/SeoKnowledgeHub';
 import {
   Search,
   Sparkles,
@@ -223,6 +224,9 @@ export const Dashboard: React.FC = () => {
           </div>
         )}
       </section>
+
+      {/* Comprehensive Academic Guide & SEO Knowledge Hub (2000+ words) */}
+      <SeoKnowledgeHub />
     </div>
   );
 };

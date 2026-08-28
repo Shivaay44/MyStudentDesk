@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /googlebcf93fc5d34f9ee0.html
+
+# Sitemaps
+Sitemap: https://mystudentdesk.vercel.app/sitemap.xml
