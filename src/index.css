@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 99 102 241;
+  }
+
+  body {
+    @apply antialiased overflow-x-hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-700/60 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-600;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 dark:bg-slate-900/75 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm transition-all duration-200;
+  }
+  
+  .glass-card-hover {
+    @apply hover:border-brand-400/60 dark:hover:border-brand-500/40 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-300;
+  }
+
+  .glow-border {
+    position: relative;
+  }
+  .glow-border::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #6366f1);
+    background-size: 300% 300%;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: glowShift 6s ease infinite;
+  }
+  .glow-border:hover::after {
+    opacity: 0.7;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-600 via-indigo-500 to-purple-600 dark:from-brand-400 dark:via-indigo-300 dark:to-purple-400 font-extrabold;
+  }
+
+  .gradient-text-amber {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-orange-600 font-extrabold;
+  }
+
+  .gradient-text-emerald {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-600 font-extrabold;
+  }
+
+  .gradient-text-rose {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-red-600 font-extrabold;
+  }
+}
+
+@keyframes glowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .glass-card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+}

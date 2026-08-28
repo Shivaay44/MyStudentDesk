@@ -1,0 +1,337 @@
+import { ToolCategory, ToolMetadata, CategoryInfo } from '../types/tools';
+
+export const CATEGORIES: CategoryInfo[] = [
+  {
+    id: 'india-exam',
+    name: 'India Exams & Boards',
+    description: 'CBSE Best 5, JEE Main Rank, NEET Score, CUET & College Merit',
+    iconName: 'GraduationCap',
+    color: 'from-orange-500 to-amber-500'
+  },
+  {
+    id: 'academic',
+    name: 'Academic & Grades',
+    description: 'Percentage, CGPA, GPA, Marks and University Conversion',
+    iconName: 'Award',
+    color: 'from-indigo-500 to-blue-600'
+  },
+  {
+    id: 'attendance',
+    name: 'Attendance & Bunk',
+    description: 'Bunk meter, safe leaves left and required classes to reach 75%',
+    iconName: 'CalendarCheck',
+    color: 'from-emerald-500 to-teal-600'
+  },
+  {
+    id: 'math',
+    name: 'Math & Science',
+    description: 'Scientific calculator, Equations, Matrices, Quadratic & Probability',
+    iconName: 'Binary',
+    color: 'from-purple-500 to-pink-600'
+  },
+  {
+    id: 'productivity',
+    name: 'Study & Focus',
+    description: 'Pomodoro timer with lo-fi/ambient focus sounds and stopwatch',
+    iconName: 'Timer',
+    color: 'from-rose-500 to-red-600'
+  },
+  {
+    id: 'utility',
+    name: 'Writing & Document Suite',
+    description: 'Client-side PDF merge/split, QR generator, Citations, Word counter',
+    iconName: 'FileText',
+    color: 'from-cyan-500 to-blue-500'
+  },
+];
+
+export const TOOLS: ToolMetadata[] = [
+  // India Exams
+  {
+    id: 'jee-predictor',
+    name: 'JEE Rank Predictor',
+    shortDesc: 'Predict NTA Percentile, Expected AIR & NIT/IIIT Admission Chances',
+    description: 'Calculates your estimated JEE Main percentile, All India Rank (AIR), category rank and cutoff eligibility based on recent shift difficulty trends.',
+    category: 'india-exam',
+    iconName: 'TrendingUp',
+    badge: 'Popular',
+    isIndiaSpecific: true,
+    isPopular: true,
+    tags: ['jee', 'jee main', 'jee rank', 'air', 'percentile', 'nit', 'iiit', 'nta', 'marks vs percentile']
+  },
+  {
+    id: 'neet-calc',
+    name: 'NEET Score & Rank Calculator',
+    shortDesc: 'Score tally (+4/-1), expected AIR & Govt MBBS seat probability',
+    description: 'Quickly evaluate your 720-mark NEET UG answer sheet across Physics, Chemistry & Biology with expected All India Rank and AIQ seat chances.',
+    category: 'india-exam',
+    iconName: 'Stethoscope',
+    badge: 'High Accuracy',
+    isIndiaSpecific: true,
+    isPopular: true,
+    tags: ['neet', 'neet ug', 'mbbs', 'aiims', 'neet rank', 'answer key', 'medical', 'score calculator']
+  },
+  {
+    id: 'cbse-percentage',
+    name: 'CBSE Percentage Calculator',
+    shortDesc: 'Calculate Class 10 & 12 stream percentage with Best 5 rule',
+    description: 'Official CBSE calculation supporting PCM, PCB, Commerce, Arts streams and vocational subject substitution rules with printable marksheet.',
+    category: 'india-exam',
+    iconName: 'Award',
+    badge: 'Best 5 Rule',
+    isIndiaSpecific: true,
+    isPopular: true,
+    tags: ['cbse', 'cbse percentage', 'class 10', 'class 12', 'best 5', 'marksheet', 'board exam']
+  },
+  {
+    id: 'cbse-cgpa',
+    name: 'CBSE CGPA Calculator',
+    shortDesc: 'Convert CGPA to percentage using standard 9.5 formula & Grade Points',
+    description: 'Standard CBSE grade point calculator (A1 to E2) with instant 9.5 conversion and indicative percentage breakdown.',
+    category: 'india-exam',
+    iconName: 'BookOpen',
+    isIndiaSpecific: true,
+    tags: ['cbse cgpa', 'cgpa to percent', '9.5 formula', 'grade point', 'a1 a2', 'grade calculator']
+  },
+  {
+    id: 'cuet-calc',
+    name: 'CUET Score Calculator',
+    shortDesc: 'Calculate aggregated CUET score for DU, BHU & Central Universities',
+    description: 'Calculate your combined CUET score across Language, Domain subjects, and General Test with target course criteria for Delhi University and BHU.',
+    category: 'india-exam',
+    iconName: 'Sparkles',
+    badge: 'CUET UG',
+    isIndiaSpecific: true,
+    tags: ['cuet', 'cuet ug', 'delhi university', 'du admissions', 'bhu', 'normalized score']
+  },
+  {
+    id: 'college-admission',
+    name: 'College Merit & Cutoff Calculator',
+    shortDesc: 'Calculate weighted admission merit (12th Board + Entrance Exam)',
+    description: 'Compute composite admission scores (e.g. 50:50, 60:40 or custom weights) for engineering, medical, law and state university admissions.',
+    category: 'india-exam',
+    iconName: 'Building2',
+    isIndiaSpecific: true,
+    tags: ['merit calculator', 'admission cutoff', 'composite score', 'weighted marks', 'tnea', 'mht cet']
+  },
+
+  // Academic Tools
+  {
+    id: 'percentage',
+    name: 'Percentage Calculator',
+    shortDesc: 'Calculate percentage, marks obtained, percentage change & discount',
+    description: 'Multi-mode percentage calculator: marks to percentage, what is X% of Y, percentage increase/decrease, and reverse percentage.',
+    category: 'academic',
+    iconName: 'Percent',
+    isPopular: true,
+    tags: ['percentage', 'percent', 'marks percentage', 'discount', 'ratio']
+  },
+  {
+    id: 'cgpa-percentage',
+    name: 'CGPA → Percentage Converter',
+    shortDesc: 'Convert CGPA to percentage for any university formula',
+    description: 'Supports CBSE (9.5x), Mumbai University, VTU, Anna University, KTU, US 4.0/10.0 scale, and custom multiplier.',
+    category: 'academic',
+    iconName: 'RefreshCw',
+    isPopular: true,
+    tags: ['cgpa', 'cgpa to percentage', 'university scale', 'vtu', 'mumbai university', 'gpa converter']
+  },
+  {
+    id: 'gpa-calc',
+    name: 'GPA & SGPA Multi-Semester Calculator',
+    shortDesc: 'Calculate weighted SGPA and cumulative CGPA across semesters',
+    description: 'Dynamic semester-by-semester credit hour and grade calculator. Supports letter grades (O, A+, A, B+, B, C, F) and 4.0 or 10.0 scale.',
+    category: 'academic',
+    iconName: 'GraduationCap',
+    isPopular: true,
+    tags: ['gpa', 'sgpa', 'cgpa', 'semester', 'college gpa', 'credit hours', 'transcript']
+  },
+  {
+    id: 'marks-calc',
+    name: 'Marks Calculator & Target Analyzer',
+    shortDesc: 'Total marks, percentage, required passing marks & grade breakdown',
+    description: 'Add multiple subjects to compute aggregate marks, passing margin, class rank estimation, and letter grade summary.',
+    category: 'academic',
+    iconName: 'CheckSquare',
+    tags: ['marks', 'total marks', 'passing marks', 'subject marks', 'grade table']
+  },
+
+  // Attendance Tools
+  {
+    id: 'attendance-calc',
+    name: 'Attendance & Bunk Calculator',
+    shortDesc: 'Find how many classes you can skip without dropping below 75%',
+    description: 'Enter total held classes and attended classes to see your current attendance percentage, visual meter, and exact safe bunks available.',
+    category: 'attendance',
+    iconName: 'CalendarCheck',
+    badge: 'Essential',
+    isPopular: true,
+    tags: ['attendance', 'bunk calculator', '75 percent', 'safe bunks', 'college attendance', 'attendance tracker']
+  },
+  {
+    id: 'required-attendance',
+    name: 'Required Attendance Calculator',
+    shortDesc: 'Calculate consecutive classes needed to reach target % (75%, 80%, etc.)',
+    description: 'If your attendance has dropped, find out exactly how many upcoming classes you must attend without missing any to restore your 75% or 80% criteria.',
+    category: 'attendance',
+    iconName: 'Target',
+    badge: 'Recovery Mode',
+    isPopular: true,
+    tags: ['target attendance', 'required attendance', 'recover attendance', '75 attendance recovery']
+  },
+
+  // Math Tools
+  {
+    id: 'scientific-calc',
+    name: 'Scientific Calculator',
+    shortDesc: 'Trig, log, powers, factorial, roots, deg/rad mode with history tape',
+    description: 'Comprehensive scientific calculator with trigonometric, inverse trig, hyperbolic, exponential, and memory functions.',
+    category: 'math',
+    iconName: 'Calculator',
+    isPopular: true,
+    tags: ['calculator', 'scientific', 'sin cos tan', 'log', 'factorial', 'square root', 'math']
+  },
+  {
+    id: 'equation-solver',
+    name: 'Linear Equation Solver',
+    shortDesc: 'Solve 2-variable & 3-variable linear systems with step-by-step method',
+    description: 'Solves systems of linear equations (2x2 and 3x3) using Cramer’s Rule with detailed determinants and step-by-step explanation.',
+    category: 'math',
+    iconName: 'Layers',
+    tags: ['equations', 'linear system', 'cramers rule', 'algebra', '2x2', '3x3', 'matrix elimination']
+  },
+  {
+    id: 'quadratic-solver',
+    name: 'Quadratic Equation Solver',
+    shortDesc: 'Solve ax² + bx + c = 0 with real/complex roots, vertex & factoring',
+    description: 'Step-by-step quadratic equation solver showing discriminant analysis, vertex coordinates, axis of symmetry, and factored form.',
+    category: 'math',
+    iconName: 'Activity',
+    tags: ['quadratic', 'roots', 'discriminant', 'vertex', 'factoring', 'complex roots', 'parabola']
+  },
+  {
+    id: 'matrix-calc',
+    name: 'Matrix Calculator',
+    shortDesc: 'Add, multiply, determinant, inverse, transpose for 2x2, 3x3 & 4x4',
+    description: 'Full matrix mathematics suite supporting addition, subtraction, matrix multiplication, determinant, adjoint/inverse, and transpose.',
+    category: 'math',
+    iconName: 'Grid',
+    tags: ['matrix', 'determinant', 'inverse matrix', 'matrix multiplication', 'transpose', 'linear algebra']
+  },
+  {
+    id: 'perm-comb',
+    name: 'Permutation & Combination (nPr / nCr)',
+    shortDesc: 'Calculate nPr, nCr with factorial steps and repetition options',
+    description: 'Calculate permutations (ordered arrangements) and combinations (selections) with factorial formulas and step-by-step breakdown.',
+    category: 'math',
+    iconName: 'Divide',
+    tags: ['permutation', 'combination', 'npr', 'ncr', 'factorial', 'combinatorics']
+  },
+  {
+    id: 'probability-calc',
+    name: 'Probability Calculator & Simulator',
+    shortDesc: 'Single, compound, union/intersection events & dice/coin simulations',
+    description: 'Compute theoretical probabilities for single & independent/dependent events, complement, Bayes theorem, plus live dice and coin flip simulators.',
+    category: 'math',
+    iconName: 'Dice5',
+    tags: ['probability', 'odds', 'coin flip', 'dice roll', 'bayes theorem', 'independent events']
+  },
+  {
+    id: 'unit-converter',
+    name: 'Comprehensive Unit Converter',
+    shortDesc: 'Length, weight, temperature, data, speed, area, volume & time',
+    description: 'Instant conversion across 80+ engineering, science, and everyday units including metric, imperial, and Indian units (Bigha, Guntha, Quintal).',
+    category: 'math',
+    iconName: 'Scale',
+    tags: ['unit converter', 'units', 'meters to feet', 'kg to lbs', 'celsius to fahrenheit', 'data storage']
+  },
+
+  // Productivity Tools
+  {
+    id: 'pomodoro',
+    name: 'Pomodoro & Focus Timer',
+    shortDesc: '25/5 focus cycles with built-in ambient study sounds & streak tracker',
+    description: 'Clean pomodoro timer with customizable focus/break intervals, lo-fi & nature ambient audio generators (rain, white noise, cafe), and task list.',
+    category: 'productivity',
+    iconName: 'Clock',
+    badge: 'Audio Included',
+    isPopular: true,
+    tags: ['pomodoro', 'focus timer', 'study timer', 'study sound', 'white noise', 'ambient noise', 'productivity']
+  },
+  {
+    id: 'study-timer',
+    name: 'Study Stopwatch & Session Tracker',
+    shortDesc: 'Dedicated study stopwatch with subject-wise logging & lap timing',
+    description: 'Track your daily study hours per subject, record split laps, and view your cumulative study session timeline.',
+    category: 'productivity',
+    iconName: 'Timer',
+    tags: ['stopwatch', 'study tracker', 'study hours', 'lap timer', 'daily study log']
+  },
+
+  // Utilities & Document Tools
+  {
+    id: 'pdf-tools',
+    name: 'PDF Tools (100% Private)',
+    shortDesc: 'Merge PDFs, Split pages, and Image to PDF directly in your browser',
+    description: 'Safe, private, client-side PDF utility suite. No files uploaded to any server. Merge assignment pages, split chapters, or turn photos into a clean PDF.',
+    category: 'utility',
+    iconName: 'FileText',
+    badge: '100% Private',
+    isPopular: true,
+    tags: ['pdf', 'merge pdf', 'split pdf', 'image to pdf', 'combine pdf', 'assignment pdf']
+  },
+  {
+    id: 'qr-gen',
+    name: 'QR Code Generator',
+    shortDesc: 'Generate customizable QR codes for links, Wi-Fi, text & notes',
+    description: 'Create high-resolution QR codes with custom colors and instant PNG download. Perfect for sharing study notes, project links, or Wi-Fi passwords.',
+    category: 'utility',
+    iconName: 'QrCode',
+    tags: ['qr code', 'qr generator', 'share notes', 'wifi qr', 'custom qr']
+  },
+  {
+    id: 'citation-gen',
+    name: 'Citation Generator',
+    shortDesc: 'Generate APA 7, MLA 9, Chicago, Harvard & IEEE citations',
+    description: 'Auto-format citations for books, research journals, websites, and YouTube educational videos with 1-click clipboard copy.',
+    category: 'utility',
+    iconName: 'Quote',
+    tags: ['citation', 'apa', 'mla', 'ieee', 'chicago', 'bibliography', 'references', 'project report']
+  },
+  {
+    id: 'word-counter',
+    name: 'Word & Character Counter',
+    shortDesc: 'Words, characters, reading time, keyword frequency & case converter',
+    description: 'Analyze essay length, character limits, estimated reading/speaking time, keyword density, and convert text case (UPPERCASE, Title Case, etc.).',
+    category: 'utility',
+    iconName: 'FileSpreadsheet',
+    tags: ['word counter', 'character count', 'reading time', 'essay length', 'case converter', 'text analyzer']
+  },
+  {
+    id: 'age-calc',
+    name: 'Age & Milestone Calculator',
+    shortDesc: 'Exact age in years, months, days, hours and birthday countdown',
+    description: 'Calculates exact chronological age down to the day, days until next birthday, zodiac sign, and time lived in weeks/hours/minutes.',
+    category: 'utility',
+    iconName: 'Calendar',
+    tags: ['age calculator', 'date of birth', 'birthday countdown', 'milestone', 'exact age']
+  },
+  {
+    id: 'date-diff',
+    name: 'Date Difference & Working Days',
+    shortDesc: 'Calculate days between dates, exclude weekends & exam countdown',
+    description: 'Compute precise duration between two dates in days, weeks, months, or working business days for exam preparation scheduling.',
+    category: 'utility',
+    iconName: 'CalendarRange',
+    tags: ['date difference', 'days between dates', 'working days', 'exam countdown', 'study days']
+  },
+  {
+    id: 'bmi-calc',
+    name: 'BMI & Student Health Calculator',
+    shortDesc: 'BMI category, ideal weight range, daily water & calorie guide',
+    description: 'Check your Body Mass Index (BMI), healthy weight bracket for height, and recommended daily water & nutrition intake for active students.',
+    category: 'utility',
+    iconName: 'HeartPulse',
+    tags: ['bmi', 'health', 'body mass index', 'ideal weight', 'water intake', 'calorie guide']
+  }
+];
