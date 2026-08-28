@@ -1,8 +1,9 @@
 import React from 'react';
-import { GraduationCap, Heart, Shield, Sparkles, Cpu, BookOpen } from 'lucide-react';
+import { Heart, Shield } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { CATEGORIES } from '../../utils/toolsData';
 import { ToolCategory } from '../../types/tools';
+import { BrandLogo } from '../common/BrandLogo';
 
 export const Footer: React.FC = () => {
   const { setSelectedCategory, setActiveToolId } = useApp();
@@ -19,12 +20,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Col 1: Brand Info */}
           <div className="md:col-span-1 space-y-3">
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-xl bg-brand-600 text-white shadow-md shadow-brand-500/20">
-                <GraduationCap className="w-5 h-5" />
-              </div>
-              <span className="font-extrabold text-lg text-slate-900 dark:text-white">MyStudentDesk</span>
-            </div>
+            <BrandLogo size="md" />
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               The premier all-in-one workspace for Indian school, college & competitive exam students. Fast, offline-first & 100% private.
             </p>

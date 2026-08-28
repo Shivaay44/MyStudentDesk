@@ -5,13 +5,11 @@ import {
   Sun,
   History,
   Star,
-  GraduationCap,
-  Sparkles,
   Command,
-  Flame,
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { CATEGORIES, TOOLS } from '../../utils/toolsData';
+import { TOOLS } from '../../utils/toolsData';
+import { BrandLogo } from '../common/BrandLogo';
 
 interface NavbarProps {
   onOpenHistory: () => void;
@@ -22,8 +20,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHistory }) => {
     theme,
     toggleTheme,
     setActiveToolId,
-    selectedCategory,
-    setSelectedCategory,
     setIsCommandPaletteOpen,
     favorites,
     history,
@@ -39,25 +35,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHistory }) => {
           {/* Logo */}
           <div
             onClick={() => setActiveToolId(null)}
-            className="flex items-center gap-2.5 cursor-pointer select-none group"
+            className="cursor-pointer group"
           >
-            <div className="relative p-2 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
-              <GraduationCap className="w-6 h-6" />
-              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-amber-400 border-2 border-white dark:border-slate-900" />
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-black text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-brand-700 to-indigo-600 dark:from-white dark:via-brand-300 dark:to-indigo-400">
-                  MyStudentDesk
-                </span>
-                <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded-md bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
-                  v2.0
-                </span>
-              </div>
-              <p className="text-[10px] font-medium text-slate-400 dark:text-slate-500 leading-none">
-                All-in-One Student Workspace
-              </p>
-            </div>
+            <BrandLogo size="md" />
           </div>
 
           {/* Center: Search Trigger (Ctrl+K) */}
@@ -96,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHistory }) => {
               >
                 <Star className="w-5 h-5" />
                 {favorites.length > 0 && (
-                  <span className="absolute 0 top-1 right-1 w-4 h-4 rounded-full bg-amber-500 text-[10px] font-bold text-white flex items-center justify-center shadow-sm">
+                  <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-amber-500 text-[10px] font-bold text-white flex items-center justify-center shadow-sm">
                     {favorites.length}
                   </span>
                 )}
