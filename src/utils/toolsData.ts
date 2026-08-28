@@ -4,49 +4,49 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'india-exam',
     name: 'India Exams & Boards',
-    description: 'CBSE Best 5, JEE Main Rank, NEET Score, CUET & College Merit',
+    description: 'CBSE Best 5, JEE Main Rank, NEET Score, CUET, BITSAT & State CETs',
     iconName: 'GraduationCap',
-    color: 'from-orange-500 to-amber-500'
+    color: 'from-orange-500 to-amber-500',
   },
   {
     id: 'academic',
     name: 'Academic & Grades',
-    description: 'Percentage, CGPA, GPA, Marks and University Conversion',
+    description: 'Percentage, CGPA, SGPA, GPA, Marks and University Conversions',
     iconName: 'Award',
-    color: 'from-indigo-500 to-blue-600'
+    color: 'from-indigo-500 to-blue-600',
   },
   {
     id: 'attendance',
     name: 'Attendance & Bunk',
     description: 'Bunk meter, safe leaves left and required classes to reach 75%',
     iconName: 'CalendarCheck',
-    color: 'from-emerald-500 to-teal-600'
+    color: 'from-emerald-500 to-teal-600',
   },
   {
     id: 'math',
     name: 'Math & Science',
-    description: 'Scientific calculator, Equations, Matrices, Quadratic & Probability',
+    description: 'Scientific calculator, Equations, Matrices, Quadratic & Fractions',
     iconName: 'Binary',
-    color: 'from-purple-500 to-pink-600'
+    color: 'from-purple-500 to-pink-600',
   },
   {
     id: 'productivity',
     name: 'Study & Focus',
-    description: 'Pomodoro timer with lo-fi/ambient focus sounds and stopwatch',
+    description: 'Pomodoro focus timer, Study stopwatch & Live exam countdowns',
     iconName: 'Timer',
-    color: 'from-rose-500 to-red-600'
+    color: 'from-rose-500 to-red-600',
   },
   {
     id: 'utility',
     name: 'Writing & Document Suite',
-    description: 'Client-side PDF merge/split, QR generator, Citations, Word counter',
+    description: 'Client-side PDF merge/split, QR generator, Citations, Word counter & Loan EMI',
     iconName: 'FileText',
-    color: 'from-cyan-500 to-blue-500'
+    color: 'from-cyan-500 to-blue-500',
   },
 ];
 
 export const TOOLS: ToolMetadata[] = [
-  // India Exams
+  // 1. India Exams & Boards
   {
     id: 'jee-predictor',
     name: 'JEE Rank Predictor',
@@ -57,7 +57,7 @@ export const TOOLS: ToolMetadata[] = [
     badge: 'Popular',
     isIndiaSpecific: true,
     isPopular: true,
-    tags: ['jee', 'jee main', 'jee rank', 'air', 'percentile', 'nit', 'iiit', 'nta', 'marks vs percentile']
+    tags: ['jee', 'jee main', 'jee rank', 'air', 'percentile', 'nit', 'iiit', 'nta', 'marks vs percentile'],
   },
   {
     id: 'neet-calc',
@@ -69,7 +69,7 @@ export const TOOLS: ToolMetadata[] = [
     badge: 'High Accuracy',
     isIndiaSpecific: true,
     isPopular: true,
-    tags: ['neet', 'neet ug', 'mbbs', 'aiims', 'neet rank', 'answer key', 'medical', 'score calculator']
+    tags: ['neet', 'neet ug', 'mbbs', 'aiims', 'neet rank', 'answer key', 'medical', 'score calculator'],
   },
   {
     id: 'cbse-percentage',
@@ -81,7 +81,29 @@ export const TOOLS: ToolMetadata[] = [
     badge: 'Best 5 Rule',
     isIndiaSpecific: true,
     isPopular: true,
-    tags: ['cbse', 'cbse percentage', 'class 10', 'class 12', 'best 5', 'marksheet', 'board exam']
+    tags: ['cbse', 'cbse percentage', 'class 10', 'class 12', 'best 5', 'marksheet', 'board exam'],
+  },
+  {
+    id: 'cbse-class-10-percentage',
+    name: 'CBSE Class 10 Percentage Calculator',
+    shortDesc: 'Class 10 Board percentage with 5-subject & 6th Skill subject replacement',
+    description: 'Dedicated CBSE 10th board calculator applying mandatory language criteria and top 4 academic/vocational subject scoring.',
+    category: 'india-exam',
+    iconName: 'BookOpen',
+    badge: 'Class 10',
+    isIndiaSpecific: true,
+    tags: ['cbse class 10', '10th percentage', 'cbse 10th result', 'best 5 10th', 'board exam 10th'],
+  },
+  {
+    id: 'cbse-class-12-percentage',
+    name: 'CBSE Class 12 Percentage Calculator',
+    shortDesc: 'Class 12 Science (PCM/PCB), Commerce & Arts stream percentage',
+    description: 'Dedicated CBSE 12th board stream calculator computing theoretical + practical aggregate with distinction analysis.',
+    category: 'india-exam',
+    iconName: 'GraduationCap',
+    badge: 'Class 12',
+    isIndiaSpecific: true,
+    tags: ['cbse class 12', '12th percentage', 'pcm percentage', 'pcb percentage', 'commerce 12th', 'arts 12th'],
   },
   {
     id: 'cbse-cgpa',
@@ -91,7 +113,7 @@ export const TOOLS: ToolMetadata[] = [
     category: 'india-exam',
     iconName: 'BookOpen',
     isIndiaSpecific: true,
-    tags: ['cbse cgpa', 'cgpa to percent', '9.5 formula', 'grade point', 'a1 a2', 'grade calculator']
+    tags: ['cbse cgpa', 'cgpa to percent', '9.5 formula', 'grade point', 'a1 a2', 'grade calculator'],
   },
   {
     id: 'cuet-calc',
@@ -102,7 +124,48 @@ export const TOOLS: ToolMetadata[] = [
     iconName: 'Sparkles',
     badge: 'CUET UG',
     isIndiaSpecific: true,
-    tags: ['cuet', 'cuet ug', 'delhi university', 'du admissions', 'bhu', 'normalized score']
+    tags: ['cuet', 'cuet ug', 'delhi university', 'du admissions', 'bhu', 'normalized score'],
+  },
+  {
+    id: 'cuet-college-predictor',
+    name: 'CUET DU & BHU College Predictor',
+    shortDesc: 'Predict Delhi University (SRCC, Hindu, Hansraj) & BHU college admission',
+    description: 'Estimate admission probability across North Campus, South Campus, and Off Campus DU colleges based on normalized CUET score.',
+    category: 'india-exam',
+    iconName: 'Building',
+    isIndiaSpecific: true,
+    tags: ['du college predictor', 'cuet college', 'srcc cutoff', 'north campus du', 'cuet du admission'],
+  },
+  {
+    id: 'bitsat-predictor',
+    name: 'BITSAT Score & Cutoff Predictor',
+    shortDesc: 'Predict BITS Pilani, Goa & Hyderabad campus branch cutoffs from 390 score',
+    description: 'Evaluate your BITSAT score against historical cutoffs for CS, Phoenix branches (ECE, EEE, ENI), Mechanical, and Dual Degrees.',
+    category: 'india-exam',
+    iconName: 'Target',
+    badge: 'BITSAT 2026',
+    isIndiaSpecific: true,
+    tags: ['bitsat', 'bits pilani', 'bits goa', 'bits hyderabad', 'bitsat cutoff', 'bitsat score vs branch'],
+  },
+  {
+    id: 'mht-cet-predictor',
+    name: 'MHT CET Percentile & Rank Predictor',
+    shortDesc: 'MHT CET Marks vs Percentile & Maharashtra Engineering Cutoff (COEP, VJTI)',
+    description: 'Predict your MHT CET PCM/PCB percentile and admission chances in top Maharashtra colleges like COEP Pune, VJTI Mumbai, and SPIT.',
+    category: 'india-exam',
+    iconName: 'Award',
+    isIndiaSpecific: true,
+    tags: ['mht cet', 'mht cet rank', 'coep cutoff', 'vjti cutoff', 'mht cet percentile', 'maharashtra cet'],
+  },
+  {
+    id: 'wbjee-predictor',
+    name: 'WBJEE Rank & College Predictor',
+    shortDesc: 'WBJEE Rank vs Marks & Jadavpur University Engineering Cutoff',
+    description: 'Predict your General Merit Rank (GMR) in WBJEE and evaluate admission chances in Jadavpur University, Kalyani, and Heritage.',
+    category: 'india-exam',
+    iconName: 'Compass',
+    isIndiaSpecific: true,
+    tags: ['wbjee', 'wbjee rank', 'jadavpur university', 'wbjee cutoff', 'gmr rank', 'west bengal jee'],
   },
   {
     id: 'college-admission',
@@ -112,10 +175,10 @@ export const TOOLS: ToolMetadata[] = [
     category: 'india-exam',
     iconName: 'Building2',
     isIndiaSpecific: true,
-    tags: ['merit calculator', 'admission cutoff', 'composite score', 'weighted marks', 'tnea', 'mht cet']
+    tags: ['merit calculator', 'admission cutoff', 'composite score', 'weighted marks', 'tnea', 'mht cet'],
   },
 
-  // Academic Tools
+  // 2. Academic & Grades
   {
     id: 'percentage',
     name: 'Percentage Calculator',
@@ -124,7 +187,18 @@ export const TOOLS: ToolMetadata[] = [
     category: 'academic',
     iconName: 'Percent',
     isPopular: true,
-    tags: ['percentage', 'percent', 'marks percentage', 'discount', 'ratio']
+    tags: ['percentage', 'percent', 'marks percentage', 'discount', 'ratio'],
+  },
+  {
+    id: 'marks-percentage',
+    name: 'Marks Percentage Calculator',
+    shortDesc: 'Calculate exact percentage from marks obtained out of total marks',
+    description: 'Fast single-input calculator: enter marks obtained and total maximum marks to get instant percentage, grade, and fraction breakdown.',
+    category: 'academic',
+    iconName: 'CheckSquare',
+    badge: 'Instant',
+    isPopular: true,
+    tags: ['marks percentage', 'marks out of total', 'exam percentage', 'test score percentage', 'calculate percentage from marks'],
   },
   {
     id: 'cgpa-percentage',
@@ -134,7 +208,17 @@ export const TOOLS: ToolMetadata[] = [
     category: 'academic',
     iconName: 'RefreshCw',
     isPopular: true,
-    tags: ['cgpa', 'cgpa to percentage', 'university scale', 'vtu', 'mumbai university', 'gpa converter']
+    tags: ['cgpa', 'cgpa to percentage', 'university scale', 'vtu', 'mumbai university', 'gpa converter'],
+  },
+  {
+    id: 'sgpa-to-percentage',
+    name: 'SGPA to Percentage Converter',
+    shortDesc: 'Convert Semester SGPA to percentage for engineering & degree colleges',
+    description: 'Convert single semester SGPA to percentage with official university formulas (VTU, Anna Univ, Mumbai Univ, AKTU, SPPU).',
+    category: 'academic',
+    iconName: 'Calculator',
+    badge: 'College',
+    tags: ['sgpa to percentage', 'sgpa converter', 'semester percentage', 'vtu sgpa', 'aktu sgpa'],
   },
   {
     id: 'gpa-calc',
@@ -144,7 +228,7 @@ export const TOOLS: ToolMetadata[] = [
     category: 'academic',
     iconName: 'GraduationCap',
     isPopular: true,
-    tags: ['gpa', 'sgpa', 'cgpa', 'semester', 'college gpa', 'credit hours', 'transcript']
+    tags: ['gpa', 'sgpa', 'cgpa', 'semester', 'college gpa', 'credit hours', 'transcript'],
   },
   {
     id: 'marks-calc',
@@ -153,20 +237,40 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Add multiple subjects to compute aggregate marks, passing margin, class rank estimation, and letter grade summary.',
     category: 'academic',
     iconName: 'CheckSquare',
-    tags: ['marks', 'total marks', 'passing marks', 'subject marks', 'grade table']
+    tags: ['marks', 'total marks', 'passing marks', 'subject marks', 'grade table'],
+  },
+  {
+    id: 'grade-calculator',
+    name: 'Final Grade & Target Exam Score Calculator',
+    shortDesc: 'Calculate what score you need on final exam to get your target course grade',
+    description: 'Weighted assessment grade calculator evaluating assignments, midterms, and project weights to determine required final score.',
+    category: 'academic',
+    iconName: 'Target',
+    tags: ['grade calculator', 'final exam calculator', 'target grade', 'passing grade needed', 'weighted grade'],
   },
 
-  // Attendance Tools
+  // 3. Attendance & Bunk
   {
     id: 'attendance-calc',
-    name: 'Attendance & Bunk Calculator',
-    shortDesc: 'Find how many classes you can skip without dropping below 75%',
-    description: 'Enter total held classes and attended classes to see your current attendance percentage, visual meter, and exact safe bunks available.',
+    name: 'Attendance Calculator',
+    shortDesc: 'Overall attendance percentage & safe leave calculation',
+    description: 'Enter total held classes and attended classes to see your current attendance percentage, visual meter, and status.',
     category: 'attendance',
     iconName: 'CalendarCheck',
     badge: 'Essential',
     isPopular: true,
-    tags: ['attendance', 'bunk calculator', '75 percent', 'safe bunks', 'college attendance', 'attendance tracker']
+    tags: ['attendance', 'attendance percentage', 'college attendance', 'attendance tracker', '75 percent rule'],
+  },
+  {
+    id: 'bunk-calculator',
+    name: 'College Bunk Calculator',
+    shortDesc: 'Find exactly how many classes you can skip without dropping below 75%',
+    description: 'Dedicated student bunk meter calculating safe bunks left before your attendance falls below the mandatory 75% or 80% limit.',
+    category: 'attendance',
+    iconName: 'Coffee',
+    badge: 'Safe Bunks',
+    isPopular: true,
+    tags: ['bunk calculator', 'can i bunk', 'how many classes can i bunk', 'safe bunks', 'bunk meter', '75 bunk'],
   },
   {
     id: 'required-attendance',
@@ -175,12 +279,12 @@ export const TOOLS: ToolMetadata[] = [
     description: 'If your attendance has dropped, find out exactly how many upcoming classes you must attend without missing any to restore your 75% or 80% criteria.',
     category: 'attendance',
     iconName: 'Target',
-    badge: 'Recovery Mode',
+    badge: 'Recovery',
     isPopular: true,
-    tags: ['target attendance', 'required attendance', 'recover attendance', '75 attendance recovery']
+    tags: ['target attendance', 'required attendance', 'recover attendance', '75 attendance recovery', 'how many classes to attend'],
   },
 
-  // Math Tools
+  // 4. Math & Science
   {
     id: 'scientific-calc',
     name: 'Scientific Calculator',
@@ -189,7 +293,16 @@ export const TOOLS: ToolMetadata[] = [
     category: 'math',
     iconName: 'Calculator',
     isPopular: true,
-    tags: ['calculator', 'scientific', 'sin cos tan', 'log', 'factorial', 'square root', 'math']
+    tags: ['calculator', 'scientific', 'sin cos tan', 'log', 'factorial', 'square root', 'math'],
+  },
+  {
+    id: 'fraction-percentage',
+    name: 'Fraction to Percentage Calculator',
+    shortDesc: 'Convert fractions, ratios & decimals to exact percentage with steps',
+    description: 'Simplifies fractions, computes exact decimal equivalents, and displays step-by-step percentage conversion with visual pie slice.',
+    category: 'math',
+    iconName: 'Divide',
+    tags: ['fraction to percentage', 'ratio to percentage', 'convert fraction', 'decimal to percent', 'fraction simplifier'],
   },
   {
     id: 'equation-solver',
@@ -198,7 +311,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Solves systems of linear equations (2x2 and 3x3) using Cramer’s Rule with detailed determinants and step-by-step explanation.',
     category: 'math',
     iconName: 'Layers',
-    tags: ['equations', 'linear system', 'cramers rule', 'algebra', '2x2', '3x3', 'matrix elimination']
+    tags: ['equations', 'linear system', 'cramers rule', 'algebra', '2x2', '3x3', 'matrix elimination'],
   },
   {
     id: 'quadratic-solver',
@@ -207,7 +320,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Step-by-step quadratic equation solver showing discriminant analysis, vertex coordinates, axis of symmetry, and factored form.',
     category: 'math',
     iconName: 'Activity',
-    tags: ['quadratic', 'roots', 'discriminant', 'vertex', 'factoring', 'complex roots', 'parabola']
+    tags: ['quadratic', 'roots', 'discriminant', 'vertex', 'factoring', 'complex roots', 'parabola'],
   },
   {
     id: 'matrix-calc',
@@ -216,7 +329,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Full matrix mathematics suite supporting addition, subtraction, matrix multiplication, determinant, adjoint/inverse, and transpose.',
     category: 'math',
     iconName: 'Grid',
-    tags: ['matrix', 'determinant', 'inverse matrix', 'matrix multiplication', 'transpose', 'linear algebra']
+    tags: ['matrix', 'determinant', 'inverse matrix', 'matrix multiplication', 'transpose', 'linear algebra'],
   },
   {
     id: 'perm-comb',
@@ -225,7 +338,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Calculate permutations (ordered arrangements) and combinations (selections) with factorial formulas and step-by-step breakdown.',
     category: 'math',
     iconName: 'Divide',
-    tags: ['permutation', 'combination', 'npr', 'ncr', 'factorial', 'combinatorics']
+    tags: ['permutation', 'combination', 'npr', 'ncr', 'factorial', 'combinatorics'],
   },
   {
     id: 'probability-calc',
@@ -234,7 +347,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Compute theoretical probabilities for single & independent/dependent events, complement, Bayes theorem, plus live dice and coin flip simulators.',
     category: 'math',
     iconName: 'Dice5',
-    tags: ['probability', 'odds', 'coin flip', 'dice roll', 'bayes theorem', 'independent events']
+    tags: ['probability', 'odds', 'coin flip', 'dice roll', 'bayes theorem', 'independent events'],
   },
   {
     id: 'unit-converter',
@@ -243,20 +356,20 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Instant conversion across 80+ engineering, science, and everyday units including metric, imperial, and Indian units (Bigha, Guntha, Quintal).',
     category: 'math',
     iconName: 'Scale',
-    tags: ['unit converter', 'units', 'meters to feet', 'kg to lbs', 'celsius to fahrenheit', 'data storage']
+    tags: ['unit converter', 'units', 'meters to feet', 'kg to lbs', 'celsius to fahrenheit', 'data storage'],
   },
 
-  // Productivity Tools
+  // 5. Productivity & Study
   {
     id: 'pomodoro',
-    name: 'Pomodoro & Focus Timer',
+    name: 'Pomodoro Focus Timer',
     shortDesc: '25/5 focus cycles with built-in ambient study sounds & streak tracker',
-    description: 'Clean pomodoro timer with customizable focus/break intervals, lo-fi & nature ambient audio generators (rain, white noise, cafe), and task list.',
+    description: 'Clean pomodoro timer with customizable focus/break intervals, ambient audio generators (rain, white noise, cafe), and task list.',
     category: 'productivity',
     iconName: 'Clock',
-    badge: 'Audio Included',
+    badge: 'Focus',
     isPopular: true,
-    tags: ['pomodoro', 'focus timer', 'study timer', 'study sound', 'white noise', 'ambient noise', 'productivity']
+    tags: ['pomodoro', 'focus timer', 'study timer', 'study sound', 'white noise', 'ambient noise', 'productivity'],
   },
   {
     id: 'study-timer',
@@ -265,10 +378,20 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Track your daily study hours per subject, record split laps, and view your cumulative study session timeline.',
     category: 'productivity',
     iconName: 'Timer',
-    tags: ['stopwatch', 'study tracker', 'study hours', 'lap timer', 'daily study log']
+    tags: ['stopwatch', 'study tracker', 'study hours', 'lap timer', 'daily study log'],
+  },
+  {
+    id: 'exam-countdown',
+    name: 'Exam Countdown & Study Planner',
+    shortDesc: 'Live countdown timers for JEE, NEET, CBSE Boards, GATE & UPSC exams',
+    description: 'Real-time countdown timer down to days, hours, minutes, and seconds with study days remaining calculator.',
+    category: 'productivity',
+    iconName: 'Calendar',
+    badge: 'Live',
+    tags: ['exam countdown', 'jee countdown', 'neet countdown', 'board exam countdown', 'days left for exam'],
   },
 
-  // Utilities & Document Tools
+  // 6. Utilities & Document Tools
   {
     id: 'pdf-tools',
     name: 'PDF Tools (100% Private)',
@@ -278,7 +401,7 @@ export const TOOLS: ToolMetadata[] = [
     iconName: 'FileText',
     badge: '100% Private',
     isPopular: true,
-    tags: ['pdf', 'merge pdf', 'split pdf', 'image to pdf', 'combine pdf', 'assignment pdf']
+    tags: ['pdf', 'merge pdf', 'split pdf', 'image to pdf', 'combine pdf', 'assignment pdf'],
   },
   {
     id: 'qr-gen',
@@ -287,7 +410,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Create high-resolution QR codes with custom colors and instant PNG download. Perfect for sharing study notes, project links, or Wi-Fi passwords.',
     category: 'utility',
     iconName: 'QrCode',
-    tags: ['qr code', 'qr generator', 'share notes', 'wifi qr', 'custom qr']
+    tags: ['qr code', 'qr generator', 'share notes', 'wifi qr', 'custom qr'],
   },
   {
     id: 'citation-gen',
@@ -296,7 +419,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Auto-format citations for books, research journals, websites, and YouTube educational videos with 1-click clipboard copy.',
     category: 'utility',
     iconName: 'Quote',
-    tags: ['citation', 'apa', 'mla', 'ieee', 'chicago', 'bibliography', 'references', 'project report']
+    tags: ['citation', 'apa', 'mla', 'ieee', 'chicago', 'bibliography', 'references', 'project report'],
   },
   {
     id: 'word-counter',
@@ -305,7 +428,17 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Analyze essay length, character limits, estimated reading/speaking time, keyword density, and convert text case (UPPERCASE, Title Case, etc.).',
     category: 'utility',
     iconName: 'FileSpreadsheet',
-    tags: ['word counter', 'character count', 'reading time', 'essay length', 'case converter', 'text analyzer']
+    tags: ['word counter', 'character count', 'reading time', 'essay length', 'case converter', 'text analyzer'],
+  },
+  {
+    id: 'simple-interest-loan',
+    name: 'Student Education Loan & EMI Calculator',
+    shortDesc: 'Calculate education loan EMI, interest accrued during moratorium & total repayment',
+    description: 'Calculate monthly repayment EMI, moratorium study period interest, and total interest payable for domestic and international higher studies.',
+    category: 'utility',
+    iconName: 'Coins',
+    badge: 'Finance',
+    tags: ['education loan', 'student loan emi', 'moratorium interest', 'loan calculator', 'study loan emi'],
   },
   {
     id: 'age-calc',
@@ -314,7 +447,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Calculates exact chronological age down to the day, days until next birthday, zodiac sign, and time lived in weeks/hours/minutes.',
     category: 'utility',
     iconName: 'Calendar',
-    tags: ['age calculator', 'date of birth', 'birthday countdown', 'milestone', 'exact age']
+    tags: ['age calculator', 'date of birth', 'birthday countdown', 'milestone', 'exact age'],
   },
   {
     id: 'date-diff',
@@ -323,7 +456,7 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Compute precise duration between two dates in days, weeks, months, or working business days for exam preparation scheduling.',
     category: 'utility',
     iconName: 'CalendarRange',
-    tags: ['date difference', 'days between dates', 'working days', 'exam countdown', 'study days']
+    tags: ['date difference', 'days between dates', 'working days', 'exam countdown', 'study days'],
   },
   {
     id: 'bmi-calc',
@@ -332,6 +465,6 @@ export const TOOLS: ToolMetadata[] = [
     description: 'Check your Body Mass Index (BMI), healthy weight bracket for height, and recommended daily water & nutrition intake for active students.',
     category: 'utility',
     iconName: 'HeartPulse',
-    tags: ['bmi', 'health', 'body mass index', 'ideal weight', 'water intake', 'calorie guide']
-  }
+    tags: ['bmi', 'health', 'body mass index', 'ideal weight', 'water intake', 'calorie guide'],
+  },
 ];

@@ -12,183 +12,261 @@
     <priority>1.00</priority>
   </url>
 
-  <!-- India Exams & Boards -->
+  <!-- 1. India Exams & Boards -->
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=jee-predictor</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/jee-predictor</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/neet-calc</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/cbse-percentage</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/cbse-class-10-percentage</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=neet-calc</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/cbse-class-12-percentage</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=cbse-percentage</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/cbse-cgpa</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/bitsat-predictor</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/mht-cet-predictor</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/wbjee-predictor</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/cuet-calc</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/cuet-college-predictor</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/college-admission</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- 2. Attendance & Bunk Tools -->
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/bunk-calculator</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/attendance-calc</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=cbse-cgpa</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/required-attendance</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=cuet-calc</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.92</priority>
   </url>
 
-  <!-- Attendance & Bunk -->
+  <!-- 3. Academic & Grade Tools -->
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=attendance-calc</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/marks-percentage</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=required-attendance</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/percentage</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/cgpa-percentage</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/sgpa-to-percentage</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/gpa-calc</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/marks-calc</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/grade-calculator</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- 4. Math & Science -->
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/scientific-calc</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/fraction-percentage</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/matrix-calc</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/quadratic-solver</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/equation-solver</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/perm-comb</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/probability-calc</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/unit-converter</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 5. Productivity & Study -->
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/pomodoro</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/study-timer</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mystudentdesk.vercel.app/#/tools/exam-countdown</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- Academic & Grades -->
+  <!-- 6. Writing & Utilities -->
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=percentage</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/pdf-tools</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=cgpa-percentage</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/simple-interest-loan</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.88</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=gpa-calc</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=marks-calc</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/qr-gen</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=college-admission</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Math & Science -->
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=scientific-calc</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/citation-gen</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=matrix-calc</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/word-counter</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.82</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=quadratic-solver</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/age-calc</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.82</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=equation-solver</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/date-diff</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=perm-comb</loc>
+    <loc>https://mystudentdesk.vercel.app/#/tools/bmi-calc</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=probability-calc</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=unit-converter</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Productivity & Study -->
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=pomodoro</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=study-timer</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Writing & Utilities -->
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=pdf-tools</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=qr-gen</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=citation-gen</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=word-counter</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=age-calc</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=date-diff</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://mystudentdesk.vercel.app/?tool=bmi-calc</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
   </url>
 </urlset>

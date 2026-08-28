@@ -7,24 +7,35 @@ import { ToolSeoSection } from '../seo/ToolSeoSection';
 
 // Academic
 import { PercentageCalc } from '../../tools/academic/PercentageCalc';
+import { MarksPercentageCalc } from '../../tools/academic/MarksPercentageCalc';
 import { CgpaPercentageCalc } from '../../tools/academic/CgpaPercentageCalc';
+import { SgpaToPercentageCalc } from '../../tools/academic/SgpaToPercentageCalc';
 import { GpaCalc } from '../../tools/academic/GpaCalc';
 import { MarksCalc } from '../../tools/academic/MarksCalc';
+import { GradeTargetCalc } from '../../tools/academic/GradeTargetCalc';
 import { CollegeAdmissionCalc } from '../../tools/academic/CollegeAdmissionCalc';
 
 // India Exams
 import { CbsePercentageCalc } from '../../tools/india-exam/CbsePercentageCalc';
+import { CbseClass10Calc } from '../../tools/india-exam/CbseClass10Calc';
+import { CbseClass12Calc } from '../../tools/india-exam/CbseClass12Calc';
 import { CbseCgpaCalc } from '../../tools/india-exam/CbseCgpaCalc';
 import { JeePredictor } from '../../tools/india-exam/JeePredictor';
 import { NeetCalc } from '../../tools/india-exam/NeetCalc';
 import { CuetCalc } from '../../tools/india-exam/CuetCalc';
+import { CuetCollegePredictor } from '../../tools/india-exam/CuetCollegePredictor';
+import { BitsatPredictor } from '../../tools/india-exam/BitsatPredictor';
+import { MhtCetPredictor } from '../../tools/india-exam/MhtCetPredictor';
+import { WbjeePredictor } from '../../tools/india-exam/WbjeePredictor';
 
 // Attendance
 import { AttendanceCalc } from '../../tools/attendance/AttendanceCalc';
+import { BunkCalc } from '../../tools/attendance/BunkCalc';
 import { RequiredAttendanceCalc } from '../../tools/attendance/RequiredAttendanceCalc';
 
 // Math
 import { ScientificCalc } from '../../tools/math/ScientificCalc';
+import { FractionPercentageCalc } from '../../tools/math/FractionPercentageCalc';
 import { EquationSolver } from '../../tools/math/EquationSolver';
 import { QuadraticSolver } from '../../tools/math/QuadraticSolver';
 import { MatrixCalc } from '../../tools/math/MatrixCalc';
@@ -35,6 +46,7 @@ import { UnitConverter } from '../../tools/math/UnitConverter';
 // Productivity
 import { PomodoroTimer } from '../../tools/productivity/PomodoroTimer';
 import { StudyTimer } from '../../tools/productivity/StudyTimer';
+import { ExamCountdown } from '../../tools/productivity/ExamCountdown';
 
 // Utility
 import { AgeCalc } from '../../tools/utilities/AgeCalc';
@@ -44,6 +56,7 @@ import { WordCounter } from '../../tools/utilities/WordCounter';
 import { CitationGenerator } from '../../tools/utilities/CitationGenerator';
 import { QrGenerator } from '../../tools/utilities/QrGenerator';
 import { PdfTools } from '../../tools/utilities/PdfTools';
+import { EducationLoanCalc } from '../../tools/utilities/EducationLoanCalc';
 
 export const ToolRenderer: React.FC = () => {
   const { currentTool, setActiveToolId } = useApp();
@@ -55,18 +68,28 @@ export const ToolRenderer: React.FC = () => {
       // Academic
       case 'percentage':
         return <PercentageCalc />;
+      case 'marks-percentage':
+        return <MarksPercentageCalc />;
       case 'cgpa-percentage':
         return <CgpaPercentageCalc />;
+      case 'sgpa-to-percentage':
+        return <SgpaToPercentageCalc />;
       case 'gpa-calc':
         return <GpaCalc />;
       case 'marks-calc':
         return <MarksCalc />;
+      case 'grade-calculator':
+        return <GradeTargetCalc />;
       case 'college-admission':
         return <CollegeAdmissionCalc />;
 
       // India Exams
       case 'cbse-percentage':
         return <CbsePercentageCalc />;
+      case 'cbse-class-10-percentage':
+        return <CbseClass10Calc />;
+      case 'cbse-class-12-percentage':
+        return <CbseClass12Calc />;
       case 'cbse-cgpa':
         return <CbseCgpaCalc />;
       case 'jee-predictor':
@@ -75,16 +98,28 @@ export const ToolRenderer: React.FC = () => {
         return <NeetCalc />;
       case 'cuet-calc':
         return <CuetCalc />;
+      case 'cuet-college-predictor':
+        return <CuetCollegePredictor />;
+      case 'bitsat-predictor':
+        return <BitsatPredictor />;
+      case 'mht-cet-predictor':
+        return <MhtCetPredictor />;
+      case 'wbjee-predictor':
+        return <WbjeePredictor />;
 
       // Attendance
       case 'attendance-calc':
         return <AttendanceCalc />;
+      case 'bunk-calculator':
+        return <BunkCalc />;
       case 'required-attendance':
         return <RequiredAttendanceCalc />;
 
       // Math
       case 'scientific-calc':
         return <ScientificCalc />;
+      case 'fraction-percentage':
+        return <FractionPercentageCalc />;
       case 'equation-solver':
         return <EquationSolver />;
       case 'quadratic-solver':
@@ -103,6 +138,8 @@ export const ToolRenderer: React.FC = () => {
         return <PomodoroTimer />;
       case 'study-timer':
         return <StudyTimer />;
+      case 'exam-countdown':
+        return <ExamCountdown />;
 
       // Utilities
       case 'age-calc':
@@ -119,6 +156,8 @@ export const ToolRenderer: React.FC = () => {
         return <QrGenerator />;
       case 'pdf-tools':
         return <PdfTools />;
+      case 'simple-interest-loan':
+        return <EducationLoanCalc />;
 
       default:
         return <div>Tool coming soon</div>;
@@ -155,10 +194,10 @@ export const ToolRenderer: React.FC = () => {
 
           <button
             onClick={() => setActiveToolId(null)}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors shadow-sm"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Back to Desk</span>
+            <span>Back to All Tools</span>
           </button>
         </div>
       </div>

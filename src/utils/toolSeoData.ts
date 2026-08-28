@@ -899,4 +899,409 @@ export const TOOL_SEO_DATA: Record<string, ToolSeoContent> = {
       },
     ],
   },
+
+  'bunk-calculator': {
+    title: 'College Bunk Calculator: Safe Leaves & 75% Attendance Meter',
+    formula: 'Safe Bunks = ⌊ (Attended - 0.75 × Total) / 0.75 ⌋\nRecovery Classes Needed = ⌈ (0.75 × Total - Attended) / 0.25 ⌉',
+    overview:
+      'Calculate the maximum number of classes you can skip without falling below the mandatory 75% or 80% college attendance requirement. Features instant safe leave allowances and recovery action plans.',
+    stepByStep: [
+      'Enter total classes held to date.',
+      'Enter attended lectures.',
+      'Select your university target threshold (75%, 80%, or 85%).',
+      'The calculator computes exact safe bunks left before your attendance falls below the target.',
+    ],
+    example: {
+      scenario: 'Attended 34 out of 40 held lectures (85% attendance, target 75%).',
+      calculation: 'Safe Bunks = ⌊ (34 - 0.75 × 40) / 0.75 ⌋ = ⌊ (34 - 30) / 0.75 ⌋ = ⌊ 4 / 0.75 ⌋ = 5.',
+      result: 'You can safely bunk 5 upcoming lectures while remaining at or above 75.0%.',
+    },
+    faqs: [
+      {
+        q: 'What happens if I bunk more classes than the safe bunk limit?',
+        a: 'Your overall attendance will drop below 75%, which may trigger exam debarment or penalty fines.',
+      },
+      {
+        q: 'Can I set target attendance to 80% for medical or law colleges?',
+        a: 'Yes, select 80% or 85% from the target selector.',
+      },
+      {
+        q: 'Does this calculator save my attendance history?',
+        a: 'Yes, your recent calculations are securely stored in your local browser history.',
+      },
+    ],
+  },
+
+  'marks-percentage': {
+    title: 'Marks Percentage Calculator: Direct Score to Percentage Guide',
+    formula: 'Percentage (%) = (Marks Obtained / Total Maximum Marks) × 100',
+    overview:
+      'Quickly convert raw test scores and marks obtained out of total marks into accurate percentage, letter grade, division classification, and fraction breakdown.',
+    stepByStep: [
+      'Input marks scored in the test or exam.',
+      'Input maximum total marks possible (e.g. 100, 300, 500, 720).',
+      'View instant percentage with First Class / Distinction division classification.',
+    ],
+    example: {
+      scenario: 'Scored 435 marks out of 500 total.',
+      calculation: 'Percentage = (435 / 500) × 100 = 87.00%.',
+      result: '87.00% (First Division with Distinction).',
+    },
+    faqs: [
+      {
+        q: 'What is 450 out of 500 in percentage?',
+        a: '450 / 500 × 100 = 90.00%.',
+      },
+      {
+        q: 'What percentage is needed for First Division with Distinction?',
+        a: 'Typically 75% or higher is considered First Class with Distinction.',
+      },
+      {
+        q: 'Can I calculate for decimal marks (e.g. 87.5 out of 100)?',
+        a: 'Yes, decimal scores are supported with full floating-point precision.',
+      },
+    ],
+  },
+
+  'sgpa-to-percentage': {
+    title: 'SGPA to Percentage Converter: University Semester Formula Guide',
+    formula: 'Standard UGC: SGPA × 9.5 | VTU / AKTU: (SGPA - 0.75) × 10 | Mumbai Univ: 7.1 × SGPA + 11',
+    overview:
+      'Convert single semester Semester Grade Point Average (SGPA) into equivalent percentage across major Indian technical universities and autonomous colleges.',
+    stepByStep: [
+      'Enter your Semester SGPA (on the 10.0 scale).',
+      'Select your university or board conversion rule from the preset list.',
+      'Get exact percentage and official formula breakdown.',
+    ],
+    example: {
+      scenario: 'Engineering student with 8.4 SGPA in VTU semester 4.',
+      calculation: 'Percentage = (8.4 - 0.75) × 10 = 7.65 × 10 = 76.50%.',
+      result: 'Equivalent Semester Percentage is 76.50%.',
+    },
+    faqs: [
+      {
+        q: 'Is SGPA calculated for one semester or all semesters combined?',
+        a: 'SGPA is for a single semester; CGPA is the cumulative average of all completed semesters.',
+      },
+      {
+        q: 'What is 8.0 SGPA in Mumbai University?',
+        a: '(7.1 × 8.0) + 11 = 56.8 + 11 = 67.80%.',
+      },
+      {
+        q: 'Can this be used for campus placement forms?',
+        a: 'Yes, select your respective university scale for placement eligibility verification.',
+      },
+    ],
+  },
+
+  'cbse-class-10-percentage': {
+    title: 'CBSE Class 10 Percentage Calculator: Best of 5 & 6th Skill Subject Rule',
+    formula: 'Percentage (%) = (Marks in 1 Mandatory Language + Top 4 Electives / 500) × 100',
+    overview:
+      'Calculate CBSE Class 10 board examination percentage adhering to official board regulations: 1 compulsory Language subject combined with your 4 highest scoring academic or vocational subjects.',
+    stepByStep: [
+      'Enter marks scored in English, Hindi/Regional Language, Math, Science, Social Science, and 6th Skill subject.',
+      'The tool automatically picks the highest language and top 4 remaining subjects.',
+      'Generates final percentage out of 500 marks.',
+    ],
+    example: {
+      scenario: 'English: 88, Hindi: 84, Math: 95, Science: 91, Social Science: 89, IT: 96.',
+      calculation: 'Best 5 = English (88) + IT (96) + Math (95) + Science (91) + Social Science (89) = 459/500.',
+      result: 'Best 5 Percentage = 91.80% (First Division with Distinction).',
+    },
+    faqs: [
+      {
+        q: 'Does IT (Information Technology) replace a subject if score is higher?',
+        a: 'Yes, if IT score is higher than Science/Social Science, it replaces the lower score in the Best 5 pool.',
+      },
+      {
+        q: 'Is English compulsory in Best 5?',
+        a: 'At least one language (English or Hindi) is mandatory.',
+      },
+      {
+        q: 'How to convert Class 10 percentage to CGPA?',
+        a: 'Divide percentage by 9.5 (e.g. 85.5% / 9.5 = 9.0 CGPA).',
+      },
+    ],
+  },
+
+  'cbse-class-12-percentage': {
+    title: 'CBSE Class 12 Percentage Calculator: PCM, PCB, Commerce & Arts',
+    formula: 'Class 12 % = (Theory Marks + Practical Marks for 5 Subjects / 500) × 100',
+    overview:
+      'Dedicated CBSE 12th board marks calculator with stream-specific configurations for Science (PCM/PCB), Commerce, and Humanities. Accounts for 70/30 and 80/20 theory-practical distributions.',
+    stepByStep: [
+      'Select stream (Science PCM, Science PCB, Commerce, or Arts).',
+      'Enter theory paper marks and internal/practical marks for each subject.',
+      'The tool computes subject-wise totals and overall aggregate percentage out of 500.',
+    ],
+    example: {
+      scenario: 'PCM student scores 90, 87, 88, 93, 94 across 5 subjects out of 500.',
+      calculation: 'Total Marks = 452 / 500 = 90.40%.',
+      result: '90.40% (Eligible for Delhi University and Top Engineering Cutoffs).',
+    },
+    faqs: [
+      {
+        q: 'What is the passing criteria for CBSE Class 12?',
+        a: 'Students must pass in Theory and Practical components separately with at least 33% in each subject.',
+      },
+      {
+        q: 'Are 5 subjects or 6 subjects counted for university cutoffs?',
+        a: 'Most universities evaluate Best 4 or Best 5 subjects depending on course eligibility criteria.',
+      },
+      {
+        q: 'Can Physical Education be counted in Best 4 for DU?',
+        a: 'DU permits 1 elective/skill subject with a 2.5% deduction unless specified for sports/PE courses.',
+      },
+    ],
+  },
+
+  'bitsat-predictor': {
+    title: 'BITSAT Score & Cutoff Predictor: Branch & Campus Forecast Guide',
+    formula: 'Evaluates 390-mark score against historical multi-iteration allotment cutoffs for Pilani, Goa & Hyderabad.',
+    overview:
+      'Predict admission chances in BITS Pilani (Main Campus), BITS Goa, and BITS Hyderabad across Computer Science, Electronics & Communication (ECE), Electrical (EEE), Mechanical, and M.Sc Dual Degree programs.',
+    stepByStep: [
+      'Enter your BITSAT raw score out of 390.',
+      'View branch eligibility and campus probability matrix (High Chance, Borderline, Tough).',
+    ],
+    example: {
+      scenario: 'Scored 295 marks out of 390 in BITSAT Session 1.',
+      calculation: 'Score 295 exceeds BITS Goa ECE (282), BITS Hyderabad CS (298 borderline), and Pilani EEE (292).',
+      result: 'High probability for BITS Goa CS/ECE, BITS Hyderabad ECE/EEE, and Pilani Phoenix branches.',
+    },
+    faqs: [
+      {
+        q: 'What is the safe score for Computer Science in BITS Pilani main campus?',
+        a: 'Historically, 330+ marks out of 390 is safe for CSE in BITS Pilani main campus.',
+      },
+      {
+        q: 'Are dual degree cutoffs lower than direct BE branches?',
+        a: 'Yes, M.Sc Economics and M.Sc Physics dual degrees typically have cutoffs around 240-275 marks.',
+      },
+      {
+        q: 'Is there board marks eligibility for BITSAT?',
+        a: 'Candidates must score at least 75% aggregate in Physics, Chemistry, and Math/Bio in 12th board with 60% minimum in each.',
+      },
+    ],
+  },
+
+  'mht-cet-predictor': {
+    title: 'MHT CET Percentile & Rank Predictor: Maharashtra Engineering Guide',
+    formula: 'Percentile = (100 × Candidates with Raw Score ≤ Your Score) / Total Shift Candidates\nState Rank Range ≈ ((100 - Percentile) / 100) × 3,50,000',
+    overview:
+      'Predict your MHT CET PCM/PCB percentile and evaluate admission cutoffs for top engineering institutions in Maharashtra including COEP Pune, VJTI Mumbai, SPIT, and PICT.',
+    stepByStep: [
+      'Select stream (PCM for Engineering or PCB for Pharmacy).',
+      'Enter raw score out of 200.',
+      'Select reservation category (Open, OBC, EWS, TFWS, SC, ST).',
+      'View estimated percentile, state rank bracket, and top college chances.',
+    ],
+    example: {
+      scenario: 'Scored 145 marks in MHT CET PCM group.',
+      calculation: '145 marks corresponds to ~98.60 percentile in normalized multi-shift test.',
+      result: 'Estimated State Rank: ~4,900 – 5,700 (High chance for IT/AI in SPIT, PICT, Walchand).',
+    },
+    faqs: [
+      {
+        q: 'What marks are needed for 99+ percentile in MHT CET?',
+        a: 'Generally 150+ raw marks out of 200 is required for 99+ percentile in PCM.',
+      },
+      {
+        q: 'What is the cutoff for COEP Pune Computer Engineering?',
+        a: 'COEP Computer Engineering typically closes at 99.80+ percentile for Open category.',
+      },
+      {
+        q: 'Does MHT CET have negative marking?',
+        a: 'No, MHT CET has zero negative marking.',
+      },
+    ],
+  },
+
+  'wbjee-predictor': {
+    title: 'WBJEE Rank & College Predictor: Jadavpur University Cutoff Guide',
+    formula: 'General Merit Rank (GMR) estimated from 200-mark paper (Math 100 + Physics/Chemistry 100).',
+    overview:
+      'Evaluate your WBJEE marks and predict your General Merit Rank (GMR) and admission probability in Jadavpur University (JU), Calcutta University, Kalyani Government Engineering College, and Heritage.',
+    stepByStep: [
+      'Enter combined marks scored in Mathematics (100) and Physics + Chemistry (100) out of 200.',
+      'The tool computes your projected GMR rank bracket and college allotment chances.',
+    ],
+    example: {
+      scenario: 'Scored 105 marks out of 200 in WBJEE.',
+      calculation: '105 marks corresponds to estimated GMR between 500 and 1,500.',
+      result: 'High probability for Jadavpur University ETCE, Mechanical, Electrical, and IT.',
+    },
+    faqs: [
+      {
+        q: 'What is the cutoff for CSE in Jadavpur University through WBJEE?',
+        a: 'JU CSE generally closes within the top 100-350 GMR rank in WBJEE general category.',
+      },
+      {
+        q: 'What is GMR in WBJEE?',
+        a: 'General Merit Rank (GMR) is the overall rank used for all engineering degree admissions in West Bengal.',
+      },
+      {
+        q: 'Are 80% seats in Jadavpur University reserved for West Bengal domiciles?',
+        a: 'Yes, 90% of general seats in state government universities in WB are reserved for state domiciles.',
+      },
+    ],
+  },
+
+  'cuet-college-predictor': {
+    title: 'CUET DU & BHU College Predictor: North & South Campus Forecast',
+    formula: 'Aggregates normalized CUET scores against past year Common Seat Allocation System (CSAS) cutoffs.',
+    overview:
+      'Predict your college allotment chances across Delhi University (SRCC, Hindu, Hansraj, Venky, KMC) and Banaras Hindu University (BHU) based on normalized CUET UG scores.',
+    stepByStep: [
+      'Select target program (B.Com Hons, B.A. Economics, B.Sc, etc.).',
+      'Select total score scale (800, 600, or 500 marks).',
+      'Enter your normalized CUET score to view North, South, and Off Campus probability.',
+    ],
+    example: {
+      scenario: 'Scored 750 / 800 in CUET UG for B.Com (Hons).',
+      calculation: 'Score 750/800 falls in the top 2% of candidates nationwide.',
+      result: 'High Chance for Hansraj, Kirori Mal, Venky, and Ramjas College.',
+    },
+    faqs: [
+      {
+        q: 'What is the cutoff for SRCC B.Com (Hons) in CUET?',
+        a: 'SRCC B.Com (Hons) generally requires 780+ marks out of 800 for Unreserved category.',
+      },
+      {
+        q: 'Does DU normalize scores between different CBSE and State board students in CUET?',
+        a: 'CUET score itself is normalized by NTA across shifts; board marks are used only for tie-breaking.',
+      },
+      {
+        q: 'What is CSAS portal in Delhi University?',
+        a: 'CSAS (Common Seat Allocation System) is the centralized counselling portal for DU admissions.',
+      },
+    ],
+  },
+
+  'exam-countdown': {
+    title: 'Exam Countdown & Study Days Planner: Live Countdown Timers',
+    formula: 'Days Left = ⌊ (Target Exam Timestamp - Current Timestamp) / (86,400,000 ms) ⌋',
+    overview:
+      'Live real-time countdown timer down to days, hours, minutes, and seconds for major Indian competitive exams (JEE Main, NEET UG, CBSE Boards, CUET, GATE, UPSC) and custom tests.',
+    stepByStep: [
+      'Select a preset exam or add your custom exam date and time.',
+      'Watch real-time countdown ticks with days remaining and available study hours projection.',
+    ],
+    example: {
+      scenario: 'Countdown to JEE Main 2027.',
+      calculation: 'Live millisecond delta calculated against exam morning shift start.',
+      result: 'Displays days, hours, minutes, and seconds remaining with revision study pacing tips.',
+    },
+    faqs: [
+      {
+        q: 'Can I add multiple custom semester exams?',
+        a: 'Yes, you can add and track multiple custom exam dates simultaneously.',
+      },
+      {
+        q: 'Does the timer update live every second?',
+        a: 'Yes, precise millisecond clock updates every second.',
+      },
+      {
+        q: 'How does it help study planning?',
+        a: 'Projects total available study hours (assuming 8 hrs/day) to help pace syllabus completion.',
+      },
+    ],
+  },
+
+  'grade-calculator': {
+    title: 'Final Grade & Target Exam Score Calculator: Weighted Course Analyzer',
+    formula: 'Required Final Score = (Target Grade - Current Grade × (1 - Final Weight)) / Final Weight',
+    overview:
+      'Determine the exact score you need on your upcoming final exam or term paper to achieve your desired target letter grade or course percentage.',
+    stepByStep: [
+      'Enter your current course grade percentage (from homework, quizzes, and midterms).',
+      'Enter your target desired overall course grade (e.g. 85%).',
+      'Set the weight percentage of the final exam (e.g. 30%).',
+      'The calculator computes the minimum score required on the final exam.',
+    ],
+    example: {
+      scenario: 'Current Grade: 78%, Target Grade: 85%, Final Exam Weight: 30%.',
+      calculation: 'Score = (85 - 78 × 0.70) / 0.30 = (85 - 54.6) / 0.30 = 30.4 / 0.30 = 101.3%.',
+      result: 'Requires ~101.3% (Target unachievable without extra credit; maximum possible is 84.6%).',
+    },
+    faqs: [
+      {
+        q: 'What does it mean if the required score is greater than 100%?',
+        a: 'It means the remaining final exam does not carry enough weight to mathematically pull your current grade up to the target without extra credit.',
+      },
+      {
+        q: 'Can I use this for university grading (e.g. GPA targets)?',
+        a: 'Yes, enter percentage equivalents for assignments and final exams.',
+      },
+      {
+        q: 'What if final exam is weighted 50% of the course?',
+        a: 'Adjust the final weight slider to 50% for direct 50:50 weighting.',
+      },
+    ],
+  },
+
+  'simple-interest-loan': {
+    title: 'Student Education Loan & EMI Calculator: Moratorium Interest Guide',
+    formula: 'Monthly EMI = [P × r × (1+r)ⁿ] / [(1+r)ⁿ - 1] | Moratorium Interest = P × R × T',
+    overview:
+      'Calculate monthly repayment EMIs, moratorium course period interest, and total cost of domestic and overseas higher education loans from banks like SBI, HDFC Credila, and Canara Bank.',
+    stepByStep: [
+      'Enter principal loan amount (in ₹ or $).',
+      'Enter annual interest rate (%) and repayment tenure in years.',
+      'Specify course moratorium period (e.g. 4 years study + 6 months grace period).',
+      'The calculator computes monthly EMI after graduation and total interest payable.',
+    ],
+    example: {
+      scenario: '₹15 Lakhs loan @ 9.5% interest for 7 years repayment with 4 years moratorium.',
+      calculation: 'Moratorium Interest = ₹5.7 Lakhs | Monthly EMI = ~₹29,800/month for 84 months.',
+      result: 'Total Repayment: ~₹25 Lakhs (₹15L principal + ₹10L total interest).',
+    },
+    faqs: [
+      {
+        q: 'What is a moratorium period in education loans?',
+        a: 'The moratorium period is the study duration plus 6-12 months after graduation where students are not required to pay full EMIs.',
+      },
+      {
+        q: 'Does paying simple interest during the moratorium reduce future EMI?',
+        a: 'Yes, paying simple interest during college prevents interest from compounding into the principal upon graduation.',
+      },
+      {
+        q: 'Are education loans eligible for tax deduction under Section 80E?',
+        a: 'Yes, interest paid on education loans is 100% tax-deductible under Section 80E of the Indian Income Tax Act with no upper cap for up to 8 years.',
+      },
+    ],
+  },
+
+  'fraction-percentage': {
+    title: 'Fraction to Percentage Calculator: Ratio & Decimal Simplifier',
+    formula: 'Percentage (%) = (Numerator / Denominator) × 100 | Ratio = Numerator : Denominator',
+    overview:
+      'Convert any proper, improper, or mixed fraction into an exact percentage, decimal value, and simplified lowest-terms ratio with step-by-step division visualization.',
+    stepByStep: [
+      'Enter numerator (top number) and denominator (bottom number).',
+      'The tool computes the greatest common divisor (GCD) to simplify the fraction.',
+      'Displays decimal value and exact percentage representation.',
+    ],
+    example: {
+      scenario: 'Convert 3/8 into percentage.',
+      calculation: '3 / 8 = 0.375 | 0.375 × 100 = 37.50%.',
+      result: '3/8 = 37.50% (Decimal: 0.375 | Ratio: 3:8).',
+    },
+    faqs: [
+      {
+        q: 'What is 1/3 as a percentage?',
+        a: '1/3 = 33.3333...% (repeating 33.33%).',
+      },
+      {
+        q: 'What is 7/8 as a percentage?',
+        a: '7/8 = 87.50%.',
+      },
+      {
+        q: 'How to convert improper fractions like 5/4?',
+        a: '5/4 = 1.25 × 100 = 125.00%.',
+      },
+    ],
+  },
 };
+

@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHistory }) => {
             >
               <div className="flex items-center gap-2">
                 <Search className="w-4 h-4 text-slate-400" />
-                <span>Search 25+ calculators, formulas, tools...</span>
+                <span>Search {TOOLS.length}+ student tools, formulas & predictors...</span>
               </div>
               <kbd className="inline-flex items-center gap-0.5 px-2 py-0.5 text-[11px] font-mono font-medium rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 shadow-sm">
                 <Command className="w-3 h-3" /> K

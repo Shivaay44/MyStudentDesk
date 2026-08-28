@@ -13,12 +13,14 @@ interface StatItem {
 
 interface ResultCardProps {
   title?: string;
-  mainValue: string | number;
+  mainValue?: string | number;
   mainLabel?: string;
   accentColor?: 'indigo' | 'emerald' | 'amber' | 'rose' | 'purple' | 'cyan';
   stats?: StatItem[];
   copyContent?: string;
   notes?: string;
+  badge?: string;
+  badgeColor?: string;
   showPrint?: boolean;
   onCelebration?: () => void;
   children?: React.ReactNode;
@@ -32,6 +34,8 @@ export const ResultCard: React.FC<ResultCardProps> = ({
   stats,
   copyContent,
   notes,
+  badge,
+  badgeColor,
   showPrint = false,
   children,
 }) => {
@@ -60,14 +64,29 @@ export const ResultCard: React.FC<ResultCardProps> = ({
   };
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl border bg-gradient-to-b ${colorStyles[accentColor]} p-6 sm:p-7 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-black/20`}>
+    <div className={`relative overflow-hidden rounded-3xl border bg-gradient-to-b ${colorStyles[accentColor]} p-6 sm:p-7 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-black/20`}>
       {/* Header Actions */}
       <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-200/60 dark:border-slate-800/60">
         <div className="flex items-center gap-2">
           <span className="inline-flex p-1.5 rounded-lg bg-white/80 dark:bg-slate-800/80 shadow-sm">
             <Sparkles className="w-4 h-4 text-brand-500" />
           </span>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">{title}</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">{title}</h3>
+          {badge && (
+            <span
+              className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                badgeColor === 'emerald'
+                  ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                  : badgeColor === 'amber'
+                  ? 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/20'
+                  : badgeColor === 'rose'
+                  ? 'bg-rose-500/15 text-rose-600 dark:text-rose-400 border border-rose-500/20'
+                  : 'bg-brand-500/15 text-brand-600 dark:text-brand-400 border border-brand-500/20'
+              }`}
+            >
+              {badge}
+            </span>
+          )}
         </div>
 
         <div className="flex items-center gap-2 no-print">
@@ -85,19 +104,21 @@ export const ResultCard: React.FC<ResultCardProps> = ({
         </div>
       </div>
 
-      {/* Main Focus Metric */}
-      <div className="my-3">
-        {mainLabel && (
-          <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
-            {mainLabel}
-          </p>
-        )}
-        <div className="flex items-baseline gap-3 flex-wrap">
-          <span className={`text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r ${textGradient[accentColor]}`}>
-            {mainValue}
-          </span>
+      {/* Main Focus Metric (if provided) */}
+      {mainValue !== undefined && (
+        <div className="my-3">
+          {mainLabel && (
+            <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">
+              {mainLabel}
+            </p>
+          )}
+          <div className="flex items-baseline gap-3 flex-wrap">
+            <span className={`text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r ${textGradient[accentColor]}`}>
+              {mainValue}
+            </span>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Secondary Stats Grid */}
       {stats && stats.length > 0 && (
@@ -120,7 +141,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
       )}
 
       {/* Custom Children */}
-      {children && <div className="mt-5">{children}</div>}
+      {children && <div className="mt-4">{children}</div>}
 
       {/* Notes / Tips */}
       {notes && (

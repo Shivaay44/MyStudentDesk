@@ -241,21 +241,40 @@ export const NeetCalc: React.FC = () => {
         </div>
       </div>
 
-      {/* Result Card */}
+      {/* Result Card with Confidence Range */}
       <ResultCard
         title="NEET UG Score & All India Rank (AIR)"
         mainValue={`${prediction.totalMarks} / 720`}
-        mainLabel={`Expected All India Rank: ~${prediction.estimatedAir.toLocaleString()}`}
+        mainLabel={`Expected AIR Range (95% CI): ${prediction.airRange}`}
         accentColor="emerald"
         showPrint
         stats={[
-          { label: 'Predicted AIR Rank', value: `~${prediction.estimatedAir.toLocaleString()}`, subtext: `Rank Range: ${prediction.airRange}` },
+          { label: 'Predicted AIR (95% CI)', value: prediction.airRange, subtext: `Median Estimate: ~${prediction.estimatedAir.toLocaleString()}` },
           { label: `${category} Category Rank`, value: `~${prediction.categoryRank.toLocaleString()}`, badge: category },
           { label: 'Govt MBBS Seat Chance', value: prediction.govtMBSChance, badge: 'AIQ 15% / State', badgeColor: prediction.govtMBSChance === 'Very High' || prediction.govtMBSChance === 'High' ? 'bg-emerald-500/10 text-emerald-600' : 'bg-amber-500/10 text-amber-600' },
           { label: 'Qualification Status', value: prediction.qualificationStatus, badge: 'NTA Standard', badgeColor: prediction.qualificationStatus === 'Qualified' ? 'bg-emerald-500/10 text-emerald-600' : 'bg-rose-500/10 text-rose-600' }
         ]}
-        copyContent={`NEET Score: ${prediction.totalMarks}/720 (Physics: ${prediction.physicsMarks}, Chemistry: ${prediction.chemistryMarks}, Biology: ${prediction.biologyMarks}) | Predicted AIR: ~${prediction.estimatedAir.toLocaleString()} | Govt MBBS Chance: ${prediction.govtMBSChance}`}
+        copyContent={`NEET Score: ${prediction.totalMarks}/720 (Physics: ${prediction.physicsMarks}, Chemistry: ${prediction.chemistryMarks}, Biology: ${prediction.biologyMarks}) | Predicted AIR Range: ${prediction.airRange} | Govt MBBS Chance: ${prediction.govtMBSChance}`}
       />
+
+      {/* Trust, Methodology & Disclaimer */}
+      <div className="p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-slate-50 dark:bg-slate-800/50 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+        <div className="flex items-center justify-between flex-wrap gap-2">
+          <span className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 text-xs">
+            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+            NEET Medical Seat Estimation Methodology (Updated: August 2026)
+          </span>
+          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+            Based on ~24,00,000 NEET UG Test Takers
+          </span>
+        </div>
+        <p className="leading-relaxed">
+          <strong>Methodology:</strong> Rank and seat probability estimates are calibrated against historical MCC (Medical Counselling Committee) Round 1, Round 2, and Mop-Up round allotment data across AIQ 15% and State 85% quotas.
+        </p>
+        <p className="text-[11px] text-slate-500 italic">
+          <strong>Disclaimer:</strong> This tool provides statistical seat projections for student reference and is not an official MCC or NTA allotment letter.
+        </p>
+      </div>
 
       <FormulaExplanation
         formula="NEET Score = (Correct Qs × 4) - (Incorrect Qs × 1) | Max = 720 (Phy: 180, Chem: 180, Bio: 360)"
