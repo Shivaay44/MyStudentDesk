@@ -43,14 +43,29 @@ const extractToolIdFromUrl = (): string | null => {
     if (slug && TOOLS.some(t => t.id === slug)) return slug;
   }
 
-  // 2. Check hash (e.g. #/tools/cbse-percentage or #/cbse-percentage or #cbse-percentage)
+  // 2. Check legacy hash (e.g. #/tools/cbse-percentage or #/cbse-percentage or #cbse-percentage)
   const hash = window.location.hash.replace('#/tools/', '').replace('#/', '').replace('#', '');
-  if (hash && TOOLS.some(t => t.id === hash)) return hash;
+  if (hash && TOOLS.some(t => t.id === hash)) {
+    // Silently migrate legacy hash URL to clean path URL
+    try {
+      window.history.replaceState(null, '', `/tools/${hash}`);
+    } catch {
+      // ignore
+    }
+    return hash;
+  }
 
   // 3. Check search params (e.g. ?tool=cbse-percentage)
   const params = new URLSearchParams(window.location.search);
   const paramTool = params.get('tool');
-  if (paramTool && TOOLS.some(t => t.id === paramTool)) return paramTool;
+  if (paramTool && TOOLS.some(t => t.id === paramTool)) {
+    try {
+      window.history.replaceState(null, '', `/tools/${paramTool}`);
+    } catch {
+      // ignore
+    }
+    return paramTool;
+  }
 
   return null;
 };
@@ -121,14 +136,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   // Sync URL changes and deep links
   const setActiveToolId = (id: string | null) => {
     setActiveToolIdState(id);
-    if (id) {
-      window.location.hash = `#/tools/${id}`;
-      addRecentTool(id);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      window.location.hash = '';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    const newPath = id ? `/tools/${id}` : '/';
+    if (window.location.pathname !== newPath || window.location.hash) {
+      window.history.pushState(null, '', newPath);
     }
+    if (id) {
+      addRecentTool(id);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -159,12 +174,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) {
-          ogUrl.setAttribute('content', `https://mystudentdesk.vercel.app/#/tools/${tool.id}`);
+          ogUrl.setAttribute('content', `https://mystudentdesk.vercel.app/tools/${tool.id}`);
         }
 
         let canonical = document.querySelector('link[rel="canonical"]');
         if (canonical) {
-          canonical.setAttribute('href', `https://mystudentdesk.vercel.app/#/tools/${tool.id}`);
+          canonical.setAttribute('href', `https://mystudentdesk.vercel.app/tools/${tool.id}`);
         }
       }
     } else {
